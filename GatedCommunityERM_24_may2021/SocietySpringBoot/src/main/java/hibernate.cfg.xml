@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/mysoc_db</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="show_sql">true</property>
+		<mapping class="hibernate.Societies"/>
+		<mapping class="hibernate.Users"/>
+		<mapping class="hibernate.UserEmail"/>
+		<mapping class="hibernate.UserMobile"/>
+		<mapping class="hibernate.Houses"/>	
+		<mapping class="hibernate.UserDocuments"/>
+		<mapping class="hibernate.UserVehicles"/>
+		<mapping class="hibernate.LocalServices"/>
+		<mapping class="hibernate.LocalServicesEmail"/>
+		<mapping class="hibernate.LocalServicesMobile"/>
+		<mapping class="hibernate.LocalServicesDocuments"/>
+		<mapping class="hibernate.Visitors"/>
+		<mapping class="hibernate.Notices"/>
+		<mapping class="hibernate.GateUsers"/>
+		<mapping class="hibernate.GateLocalServices"/>
+		<mapping class="hibernate.GateUserVehicles"/>
+		<mapping class="hibernate.EmergencyContacts"/>
+		<mapping class="hibernate.Committee"/>
+		<mapping class="hibernate.Maintenance"/>
+		<mapping class="hibernate.MaintenanceType"/>
+		<mapping class="hibernate.Messages"/>
+		<mapping class="hibernate.LatestUID"/>
+	</session-factory>
+</hibernate-configuration>
